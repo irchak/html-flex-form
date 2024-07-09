@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <script defer src="./assets/js/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="head-form">Contact form</h1>
+      <p class="subtitle">
+        Please fill you information and we`ll be sending you order.
+      </p>
+      <form id="form-html" class="form">
+        <label class="form-label">
+          <span class="caption">Your name</span>
+          <input
+            class="form-input"
+            type="text"
+            name="first name"
+            placeholder="first name"
+            required
+            autofocus
+            tabindex="1"
+            minlength="2"
+            maxlength="32"
+            pattern="[A-Z][a-z]*"
+          />
+          <input
+            class="form-input"
+            type="text"
+            name="last name"
+            placeholder="last name"
+            tabindex="2"
+            minlength="2"
+            maxlength="65"
+            pattern="[A-Z][a-z]{1,31}(-[A-Z][a-z]{1,31})?"
+          />
+        </label>
+
+        <label class="form-label">
+          <span class="caption">Your email </span>
+          <input
+            class="form-input"
+            type="email"
+            name="user-email"
+            placeholder="your_mail@mail.com"
+            tabindex="3"
+          />
+        </label>
+
+        <label class="form-label">
+          <span class="caption">Phone*</span>
+          <input
+            class="form-input"
+            type="tel"
+            name="user-phone-1"
+            tabindex="4"
+            pattern="?\d{3}"
+            maxlength="3"
+            placeholder="000"
+            required
+          />
+          <input
+            class="form-input"
+            type="tel"
+            name="user-phone-2"
+            tabindex="5"
+            pattern="?\d{3}"
+            maxlength="3"
+            placeholder="000"
+            required
+          />
+          <input
+            class="form-input"
+            type="tel"
+            name="user-phone-2"
+            tabindex="6"
+            pattern="?\d{4}"
+            maxlength="4"
+            placeholder="0000"
+            required
+          />
+        </label>
+
+        <div class="form-div">
+          <span class="caption">Message subject*</span>
+          <select class="form-select" name="form-select" required size="1">
+            <option value="Other">Other</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Sport">Sport</option>
+            <option value="Leisure">Leisure</option>
+          </select>
+        </div>
+
+        <div class="form-div">
+          <span class="caption">Message*</span>
+          <textarea
+            class="textarea"
+            name="textarea"
+            cols="50"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button class="btn" type="submit">SUBMIT FORM</button>
+      </form>
+    </main>
+  </body>
+</html>
